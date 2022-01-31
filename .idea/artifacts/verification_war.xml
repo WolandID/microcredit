@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="verification:war">
+    <output-path>$PROJECT_DIR$/verification/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>false</exploded>
+        <module>verification</module>
+        <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
+      </options>
+    </properties>
+    <root id="archive" name="verification-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="verification:war exploded" />
+    </root>
+  </artifact>
+</component>
