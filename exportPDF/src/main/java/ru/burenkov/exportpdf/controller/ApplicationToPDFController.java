@@ -27,7 +27,7 @@ public class ApplicationToPDFController {
         String currentDateTime = dateFormatter.format(new Date());
 
         String headerKey = "Content-Disposition";
-        String headerValue = "attachment; filename=users_" + currentDateTime + ".pdf";
+        String headerValue = "attachment; filename=application_" + currentDateTime + ".pdf";
         response.setHeader(headerKey, headerValue);
 
 

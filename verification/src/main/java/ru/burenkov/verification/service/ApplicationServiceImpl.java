@@ -23,7 +23,7 @@ public class ApplicationServiceImpl implements ApplicationService{
         }else{
             applicationEntity.setAccept(true);
 
-        }
+     }
         applicationRepository.save(applicationEntity);
     }
 }

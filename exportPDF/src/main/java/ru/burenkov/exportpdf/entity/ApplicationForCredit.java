@@ -12,7 +12,6 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 public class ApplicationForCredit {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,7 +22,7 @@ public class ApplicationForCredit {
 
     private Integer age;
 
-    private Integer mounth;
+    private Integer mounts;
 
     private Integer sum;
 
