@@ -18,7 +18,7 @@ import java.util.Map;
 public class ProducerConfiguration {
     private static final String TOPIC = "requests";
 
-    private String bootstrapServers = "192.168.1.40:9092";
+    private static final String bootstrapServers = "192.168.1.40:9092";
 
     @Bean
     public Map<String, Object> producerConfigs() {

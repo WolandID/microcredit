@@ -7,7 +7,6 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @Entity
 @Table(name = "processed_requests")
 public class ApplicationEntity {
@@ -20,7 +19,7 @@ public class ApplicationEntity {
 
     private Integer age;
 
-    private Integer mounth;
+    private Integer mounts;
 
     private Integer sum;
 

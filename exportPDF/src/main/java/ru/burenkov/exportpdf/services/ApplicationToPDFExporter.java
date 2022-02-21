@@ -31,7 +31,7 @@ public class ApplicationToPDFExporter {
         cell.setPhrase(new Phrase("Age", font));
         table.addCell(cell);
 
-        cell.setPhrase(new Phrase("Mount", font));
+        cell.setPhrase(new Phrase("Mounts", font));
         table.addCell(cell);
         cell.setPhrase(new Phrase("Sum", font));
 
@@ -45,7 +45,7 @@ public class ApplicationToPDFExporter {
 
             table.addCell(applicationForCredit.getFullName());
             table.addCell(String.valueOf(applicationForCredit.getAge()));
-            table.addCell(String.valueOf(applicationForCredit.getMounth()));
+            table.addCell(String.valueOf(applicationForCredit.getMounts()));
             table.addCell(String.valueOf(applicationForCredit.getSum()));
             table.addCell(String.valueOf(applicationForCredit.getAccept()));
 
