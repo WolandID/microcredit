@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 import ru.burenkov.exportpdf.entity.ApplicationForCredit;
 
 
+
 @Repository
 public interface ApplicationForCreditRepository extends JpaRepository<ApplicationForCredit,Long>{}
 

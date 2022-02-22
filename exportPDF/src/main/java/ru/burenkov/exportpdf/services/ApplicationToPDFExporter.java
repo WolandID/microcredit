@@ -5,18 +5,16 @@ import com.lowagie.text.Font;
 import com.lowagie.text.pdf.PdfPCell;
 import com.lowagie.text.pdf.PdfPTable;
 import com.lowagie.text.pdf.PdfWriter;
-import ru.burenkov.exportpdf.entity.ApplicationForCredit;
+import ru.burenkov.exportpdf.model.Application;
+
 
 import javax.servlet.http.HttpServletResponse;
 import java.awt.*;
 import java.io.IOException;
 
 
-public class ApplicationToPDFExporter {
-    private final ApplicationForCredit applicationForCredit;
-    public ApplicationToPDFExporter(ApplicationForCredit applicationForCredit){
-        this.applicationForCredit = applicationForCredit;
-    }
+public record ApplicationToPDFExporter(Application application) {
+
     private void writeTableHeader(PdfPTable table) {
         PdfPCell cell = new PdfPCell();
         cell.setBackgroundColor(Color.BLUE);
@@ -43,11 +41,11 @@ public class ApplicationToPDFExporter {
 
     private void writeTableData(PdfPTable table) {
 
-            table.addCell(applicationForCredit.getFullName());
-            table.addCell(String.valueOf(applicationForCredit.getAge()));
-            table.addCell(String.valueOf(applicationForCredit.getMounts()));
-            table.addCell(String.valueOf(applicationForCredit.getSum()));
-            table.addCell(String.valueOf(applicationForCredit.getAccept()));
+        table.addCell(application.getFullName());
+        table.addCell(String.valueOf(application.getAge()));
+        table.addCell(String.valueOf(application.getMounts()));
+        table.addCell(String.valueOf(application.getSum()));
+        table.addCell(String.valueOf(application.getAccept()));
 
     }
 
@@ -56,7 +54,7 @@ public class ApplicationToPDFExporter {
         PdfWriter.getInstance(document, response.getOutputStream());
 
         document.open();
-        com.lowagie.text.Font font = FontFactory.getFont(FontFactory.HELVETICA_BOLD);
+        Font font = FontFactory.getFont(FontFactory.HELVETICA_BOLD);
         font.setSize(18);
         font.setColor(Color.BLUE);
 
@@ -67,7 +65,7 @@ public class ApplicationToPDFExporter {
 
         PdfPTable table = new PdfPTable(5);
         table.setWidthPercentage(100f);
-        table.setWidths(new float[] {3.5f, 1.5f, 2.0f, 3.0f, 1.5f});
+        table.setWidths(new float[]{3.5f, 1.5f, 2.0f, 3.0f, 1.5f});
         table.setSpacingBefore(10);
 
         writeTableHeader(table);
