@@ -1,5 +1,5 @@
-# microcredit
-Microservice application for accepting and verifying loan applications
+# Microservice application for accepting and verifying loan applications.
+
 Проект представляет собой   мини-кредитный конвейер. Он состоит из цепочки микросервисов, которые обрабатывают заявки на кредиты.
 
 Первый  микросервис (reception) - принималка заявок.
